@@ -10,8 +10,13 @@ let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
 
-for (let i = pronoun; i == pronoun; i++) {
-  for (let k = adj; k != i; k++) {
-    for (let o = noun; o != i; o++)
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      let div = document.createElement("div");
+      div.innerText = `
+        ${pronoun[i]}${adj[j]}${noun[k]}.com`;
+      document.body.appendChild(div);
+    }
   }
 }
